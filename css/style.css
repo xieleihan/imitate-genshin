@@ -1,0 +1,1100 @@
+/* 业务逻辑样式 */
+/* 顶部导航栏 */
+/* start */
+.header {
+    height: 66px;
+    background: rgba(17, 17, 17, 0.8);
+    padding-left: 50px;
+    padding-right: 50px;
+    /* 固定定位 */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* 设置最小宽度 */
+    min-width: 1280px;
+    /* 确保导航栏始终在最上层 */
+    /* 这个是设置堆叠顺序,z-index:谁越大谁在上面 */
+    z-index: 10;
+}
+
+.header .header-left {
+    position: relative;
+    height: 66px;
+}
+
+.header-left .music-icon {
+    width: 30px;
+    height: 30px;
+    background: url(/img/music.png);
+    /* background-size: 第一个是设置背景图片宽度 第二个是背景图片高度 */
+    background-size: 100% 100%;
+    cursor: pointer;
+    margin-top: 18px;
+    position: absolute;
+    left: 45px;
+    top: 0;
+    z-index: 10;
+}
+
+.header-left .logo {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-left .logo img {
+    width: 317px;
+    height: 100%;
+}
+
+.header-left .nav {
+    margin-left: 280px;
+    position: relative;
+    height: 66px;
+}
+
+.header-left .nav ul {
+    height: 100%;
+    /* 设置行高的值跟高度一样的时候,就可以实现单行文本垂直居中 */
+    line-height: 66px;
+}
+
+.header-left .nav ul li {
+    float: left;
+    margin-right: 43px;
+}
+
+.header-left .nav ul li a {
+    /* 这个display是用来把a标签转成块元素 */
+    display: block;
+    color: #cccccc;
+    font-size: 17px;
+    /* 设置每个字符之间的间隙 */
+    letter-spacing: 6px;
+}
+
+.header-left .nav ul li a.active {
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    color: white;
+}
+
+/* 鼠标移入后效果 */
+.header-left .nav ul li a:hover {
+    /* css3文本阴影 */
+    /* text-shadow 第一个参数是x轴的偏移量 第二个参数是y轴的偏移量 第三个参数是模糊度 第四个参数是颜色 */
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    color: white;
+}
+
+.header-left .nav .line {
+    width: 40px;
+    height: 5px;
+    background: #69e0ff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.header .header-right {
+    height: 27px;
+    margin-top: 19.5px;
+    color: #cccccc;
+    font-size: 17px;
+}
+
+.header .header-right .item {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.header .header-right .item img {
+    width: 27px;
+    height: 27px;
+    /* 设置vertical-align: middle，
+    会让该元素盒子的垂直中点与父元素(行盒子)的baseline值+x-height的一半（字母x高度的一半）位置对齐。 */
+    vertical-align: middle;
+    margin-left: 12px;
+    /* opacity设置元素以及其内容的透明度, 取值0~1之间的数字,允许小数, 
+    包括0和1 0代表完全透明度 1代表完全不透明度 */
+    opacity: 0.6;
+}
+
+.header .header-right .item:hover {
+    color: white;
+}
+
+.header .header-right .item:hover img {
+    opacity: 1;
+}
+
+/* end */
+
+/* 首页样式 */
+/* start */
+/* 海报墙样式 */
+/* start */
+.main .poster {
+    width: 100%;
+    height: 100vh;
+}
+
+.main .poster .bg-video video {
+    /* 将对象撑满 */
+    object-fit: cover;
+    height: 100vh;
+}
+
+/* end */
+
+/* 应用描述 */
+/* start */
+.main .poster .app-desc {
+    /* 字体颜色 */
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    bottom: 20px;
+    position: absolute;
+    left: 20px;
+}
+
+.main .poster .app-desc p a {
+    /* 添加下划线 */
+    text-decoration: underline;
+}
+
+/* end */
+
+/* 下载游戏层 */
+/* 视频播放 */
+/* start */
+.main .poster .download {
+    position: absolute;
+    width: 622px;
+    height: 300px;
+    left: 50%;
+    bottom: 10px;
+    margin-left: -311px;
+    /* background-color: pink; */
+}
+
+.main .poster .download .play-btn {
+    background: url('/img/play-bg.png');
+    width: 356px;
+    height: 76px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    margin-left: -178px;
+}
+
+.main .poster .download .play-btn .play-btn-box-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top: 14px;
+    margin-left: -24px;
+    cursor: pointer;
+    /* 添加过渡动画,时间可以写成.x,因为等于0.x */
+    transition: all 0.3s;
+}
+
+.main .poster .download .play-btn .play-btn-box-img:hover {
+    background: transparent;
+}
+
+.main .poster .download .play-btn .play-btn-box-img .play-btn-img {
+    background: url('/img/play-inner.png');
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 50%;
+    top: 10.5px;
+    margin-left: -14px;
+}
+
+.main .poster .download .play-btn .play-btn-box-img:hover .play-btn-img {
+    /* 背景图片定位 */
+    background-position: left bottom;
+}
+
+/* 二维码 */
+/* start */
+.main .poster .download .down-types {
+    height: 125px;
+    /* background: #69e0ff; */
+    margin-top: 100px;
+}
+
+.main .poster .download .down-types .qrcode {
+    width: 94px;
+    height: 94px;
+    background: url('/img/d-qrcode.png');
+    background-size: 100% 100%;
+    text-align: center;
+}
+
+.main .poster .download .down-types .qrcode img {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #475e7d;
+    border-radius: 4px;
+    /* 32怎嘛来的,就是大盒子占用94-小盒子里面那张图片30=64,就是空白的区域,对其除于2就可以 */
+    margin-top: 32px;
+}
+
+/* end */
+
+/* 下载方式 */
+/* start */
+/* 云原神 */
+/* start */
+.main .poster .download .down-types .cloud-ys {
+    width: 95px;
+    height: 95px;
+    /* 左右边距 */
+    margin-left: 6px;
+    /* border: 2px solid black; */
+    margin-right: 6px;
+}
+
+/* -- 鼠标移入后显示 */
+.main .poster .download .down-types .cloud-ys a .cloud-ys-object {
+    display: block;
+}
+
+.main .poster .download .down-types .cloud-ys a .cloud-ys-model {
+    display: none;
+}
+
+.main .poster .download .down-types .cloud-ys a:hover .cloud-ys-object {
+    display: none;
+}
+
+.main .poster .download .down-types .cloud-ys a:hover .cloud-ys-model {
+    display: block;
+}
+
+/* end */
+
+/* 这个是云原神右边4个盒子 */
+/* start */
+.main .poster .download .down-types .app-download {
+    margin-right: 8px;
+}
+
+.main .poster .download .down-types .app-download a {
+    width: 155px;
+    height: 44px;
+    display: block;
+    margin-bottom: 7px;
+}
+
+.main .poster .download .down-types .app-download a img {
+    width: 155px;
+    height: 44px;
+}
+
+.main .poster .download .down-types .app-download a .img1 {
+    display: block;
+}
+
+.main .poster .download .down-types .app-download a .img2 {
+    display: none;
+}
+
+.main .poster .download .down-types .app-download a:hover .img1 {
+    display: none;
+}
+
+.main .poster .download .down-types .app-download a:hover .img2 {
+    display: block;
+}
+
+/* end */
+
+/* 这个是pc版盒子 */
+/* start */
+.main .poster .download .down-types .pc-download {
+    width: 95px;
+    height: 95px;
+    display: block;
+}
+
+.main .poster .download .down-types .pc-download a {
+    width: 95px;
+    height: 95px;
+    display: blcok;
+}
+
+.main .poster .download .down-types .pc-download a img {
+    width: 95px;
+    height: 95px;
+}
+
+.main .poster .download .down-types .pc-download a .pc-ys {
+    display: block;
+}
+
+.main .poster .download .down-types .pc-download a .pc-ys-model {
+    display: none;
+}
+
+.main .poster .download .down-types .pc-download a:hover .pc-ys {
+    display: none;
+}
+
+.main .poster .download .down-types .pc-download a:hover .pc-ys-model {
+    display: block;
+}
+
+/* end */
+
+/* 下移图标 */
+/* start */
+.main .poster .download .down-type {
+    /* position: absolute;
+    margin-bottom: 12px; */
+    width: 26px;
+    /* height: 45px; */
+    /* left: 50%; */
+    margin: 0px auto;
+    /* background-color: #69e0ff; */
+    /* background-repeat: no-repeat; */
+    /* background-position: center 0; */
+    /* background-color: transparent; */
+    /* background-size: auto; */
+    /* animation-name: arrow; */
+    /* animation-direction 是动画持续时间 */
+    /* animation-duration: 1.5s; */
+    /* 动画函数 linear是线性动画,Chrome有对应的动画显示 */
+    /* animation-timing-function: linear; */
+    /* 让动画帧无限执行,不会结束,也就不会应用最后帧样式 */
+    /* animation-iteration-count: infinite; */
+}
+
+.main .poster .download .down-type img {
+    /* 去掉图片边框用 */
+    display: block;
+}
+
+.main .poster .download .down-type .down-type-1 {
+    /* animation-delay: 0s; */
+    animation: arrow 1.5s infinite 0s;
+    /* background-color: #69e0ff; */
+}
+
+.main .poster .download .down-type .down-type-2 {
+    /* animation-delay: 0.5s; */
+    animation: arrow 1.5s infinite 0.5s;
+    /* background-color: #69e0ff; */
+}
+
+.main .poster .download .down-type .down-type-3 {
+    animation: arrow 1.5s infinite 1s;
+    /* animation-delay: 1s; */
+}
+
+@keyframes arrow {
+
+    /* 这里写的是对时间产生比例进行效果输出 */
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* end */
+
+/* end */
+
+/* 适龄提示层 */
+/* start */
+.main .poster .tips {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+/* end */
+
+/* 召唤层 */
+/* start */
+.main .poster .qszh {
+    position: absolute;
+    /* bottom: 20px; */
+    right: 20px;
+    top: 70px;
+}
+
+/* end */
+
+/* 新闻页面 */
+/* start */
+
+/* 新闻标题栏 */
+/* start */
+.main .news {
+    background: url('/img/news-bg.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 910px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.main .news h3 {
+    position: relative;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    margin: 183px auto 60px;
+    /* z-index: 10; */
+}
+
+.main .news h3::before {
+    box-sizing: border-box;
+    padding: 0;
+    --webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.main .news h3::before {
+    left: 0;
+    transform: translate(calc(-100% - 32px), -50%);
+}
+
+.main .news h3::before {
+    content: '';
+    position: absolute;
+    width: 385px;
+    top: 50%;
+    height: 14px;
+    background: url('/img/title-bar-left.png') no-repeat right center/cover;
+}
+
+.main .news h3::after {
+    right: 0;
+    /* 变形旋转 */
+    transform: translate(calc(100% + 32px), -50%) rotateY(180deg);
+}
+
+.main .news h3::after {
+    content: '';
+    position: absolute;
+    width: 385px;
+    top: 50%;
+    height: 14px;
+    background: url('/img/title-bar-left.png') no-repeat left center/cover;
+}
+
+/* end */
+
+/* 新闻主banner */
+/* start */
+.main .news .news-main {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.main .news .news-main .news-swiper {
+    position: relative;
+    width: 640px;
+    margin: 0;
+    background: rgba(38, 18, 12, 0.62);
+    overflow: hidden;
+    padding: 0;
+}
+
+.main .news .news-main .news-swiper .swiper-wrapper {
+    position: relative;
+    width: 640px;
+    height: 400px;
+    z-index: 1;
+    display: flex;
+    box-sizing: content-box;
+}
+
+.main .news .news-main .news-swiper .swiper-wrapper img {
+    width: 640px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .news .news-main .news-swiper .dot {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.main .news .news-main .news-swiper .dot li {
+    width: 18px;
+    height: 18px;
+    background: transparent;
+    border-radius: 50%;
+    float: left;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.main .news .news-main .news-swiper .dot li:last-child {
+    margin-right: 0;
+}
+
+.main .news .news-main .news-swiper .dot li.active {
+    background: white;
+}
+
+/* end */
+
+/* 新闻右边主内容 */
+/* start */
+
+/* 顶部新闻右边导航栏 */
+/* :start */
+.main .news .news-main .news-content {
+    height: 400px;
+    width: 640px;
+    color: white;
+    padding-left: 24px;
+    padding-right: 24px;
+    background: rgba(38, 18, 12, 0.62);
+}
+
+.main .news .news-main .news-content .news-tab-list {
+    padding-top: 35px;
+    border-bottom: 3px soild rgba(255, 255, 255, 0.1);
+}
+
+.main .news .news-main .news-content .news-tab-list span {
+    font-size: 18px;
+    width: 74px;
+    height: 36px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+}
+
+.main .news .news-main .news-content .news-tab-list span.news-tab-item {
+    color: #ffd49f;
+    position: relative;
+}
+
+.main .news .news-main .news-content .news-tab-list span.news-tab-item::after {
+    content: "";
+    width: 74px;
+    height: 3px;
+    background: #ffd49f;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+}
+
+/* :end */
+
+/* 下面新闻内容 */
+/* start */
+.main .news .news-main .news-content .news-down-list ul li {
+    height: 52px;
+    /* 行高与本身高度相同是让其居中 */
+    line-height: 52px;
+    font-size: 16px;
+    border-bottom: 2px soild rgba(255, 255, 0, 0.08);
+}
+
+.main .news .news-main .news-content .news-down-list ul li:hover {
+    background: rgba(255, 215, 159, 0.06);
+}
+
+.main .news .news-main .news-content .news-down-list ul li a p {
+    float: left;
+    width: 480px;
+    /* css实现单行文本出现省略号,一共要三行源码 */
+    /* 第一步 */
+    /* 强制文字一行显示 */
+    white-space: nowrap;
+    /* 第二步 */
+    /* 强制文字只显示一行 */
+    overflow: hidden;
+    /* 第三步 */
+    /* 强制文字只显示一行，且末尾显示省略号 */
+    text-overflow: ellipsis;
+}
+
+.main .news .news-main .news-content .news-down-list ul li a .news-date {
+    float: right;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 14px;
+}
+
+/* end */
+
+/* 查看全部资讯 */
+/* start */
+.main .news .news-main .news-content .viewAll {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.75);
+    text-align: right;
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+}
+
+.main .news .news-main .news-content .viewAll .plus-icon {
+    width: 22px;
+    height: 22px;
+    background: url('/img/plus.png');
+    /* 转成行内块元素 行内块元素可以设置宽度和高度一致 */
+    display: inline-block;
+    /* vertical-align用来指定行内元素或者表格单元格元素垂直对齐方式 */
+    /* 使用环境在于使行内元素盒子模型与其行内元素容器垂直对齐 */
+    vertical-align: -4px;
+    margin-right: 15px;
+}
+
+.main .news .news-main .news-content .viewAll:hover {
+    color: #cfab82;
+}
+
+.main .news .news-main .news-content .viewAll:hover .plus-icon {
+    background: url('/img/plus2.png');
+}
+
+/* end */
+
+/* end */
+
+/* 原神城市介绍 */
+/* start */
+/* .main .city {} */
+
+.main .city .city-list {
+    /* height: 260px; */
+    position: relative;
+    /* 溢出隐藏 */
+    overflow: hidden;
+    /* 鼠标模拟 */
+    cursor: pointer;
+}
+
+.main .city .city-list .city-list-item {
+    width: 100%;
+    height: 260px;
+    position: relative;
+    /* 溢出隐藏 */
+    overflow: hidden;
+}
+
+.main .city .city-list .city-list-item .city-border {
+    width: 100%;
+    height: 260px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 5px solid white;
+    /* 设置透明度为0 */
+    opacity: 0;
+    /* 设置堆叠顺序 */
+    z-index: 1;
+    /* 设置过渡属性 */
+    transition: all .3s;
+}
+
+/* 背景添加区域 */
+/* :start */
+/* 蒙德 */
+.main .city .city-list .city-list-item .city-list-bg {
+    width: 100%;
+    height: 260px;
+    background: url('/img/city1.jpg') no-repeat center center/cover;
+    transition: all .3s;
+}
+
+/* 璃月 */
+.main .city .city-list .city-list-item2 .city-list-bg-1 {
+    width: 100%;
+    height: 260px;
+    background: url('/img/city2.jpg') no-repeat center center/cover;
+    transition: all .3s;
+}
+
+/* 稻妻 */
+.main .city .city-list .city-list-item3 .city-list-bg-2 {
+    width: 100%;
+    height: 260px;
+    background: url('/img/city3.jpg') no-repeat center center/cover;
+    transition: all .3s;
+}
+
+/* 须弥 */
+.main .city .city-list .city-list-item4 .city-list-bg-3 {
+    width: 100%;
+    height: 260px;
+    background: url('/img/city4.jpg') no-repeat center center/cover;
+    transition: all .3s;
+}
+
+/* 枫丹 */
+.main .city .city-list .city-list-item5 .city-list-bg-4 {
+    width: 100%;
+    height: 260px;
+    background: url('/img/city5.jpg') no-repeat center center/cover;
+    transition: all .3s;
+}
+
+/* 敬请期待 */
+/* .main .city .city-list .city-list-item6 .city-list-bg-5 {
+    width: 100%;
+    height: 260px;
+    background: url('/img/wait.jpg') no-repeat center center/cover;
+    transition: all .3s;
+} */
+
+/* :end */
+
+.main .city .city-list .city-list-item .city-list-char img {
+    width: 960px;
+    height: 260px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    opacity: 0;
+}
+
+.main .city .city-list .city-list-item a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 260px;
+    background: url('/img/title-square.png') no-repeat center center;
+    text-align: center;
+    color: white;
+    line-height: 260px;
+    font-size: 36px;
+    /* 设置堆叠顺序 */
+    z-index: 10;
+}
+
+.main .city .city-list .city-list-item a img {
+    width: 210px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 30px);
+    /* 设置透明度为0 */
+    opacity: 0;
+    /* 设置过渡属性 */
+    transition: all .3s;
+    z-index: 10;
+}
+
+.main .city .city-list .city-list-item .city-list-mask {
+    width: 100%;
+    height: 260px;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* 设置过渡属性 */
+    transition: all .3s;
+}
+
+.main .city .city-list .city-list-item:hover .city-list-char img {
+    /* 设置透明度为1 */
+    opacity: 1;
+}
+
+.main .city .city-list .city-list-item:hover a::after {
+    /* 设置透明度为1 */
+    opacity: 1;
+}
+
+.main .city .city-list .city-list-item:hover .city-border {
+    opacity: 1;
+}
+
+.main .city .city-list .city-list-item:hover .city-list-mask {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* 鼠标移入的时候对背景图片进行缩放显示 */
+/* start */
+/* 蒙德 */
+.main .city .city-list .city-list-item:hover .city-list-bg {
+    /* 变形-缩放 */
+    transform: scale(1.05);
+}
+
+/* 璃月 */
+.main .city .city-list .city-list-item2:hover .city-list-bg-1 {
+    /* 变形-缩放 */
+    transform: scale(1.05);
+}
+
+/* 稻妻 */
+.main .city .city-list .city-list-item3:hover .city-list-bg-2 {
+    /* 变形-缩放 */
+    transform: scale(1.05);
+}
+
+/* 须弥 */
+.main .city .city-list .city-list-item4:hover .city-list-bg-3 {
+    /* 变形-缩放 */
+    transform: scale(1.05);
+}
+
+/* 枫丹 */
+.main .city .city-list .city-list-item5:hover .city-list-bg-4 {
+    /* 变形-缩放 */
+    transform: scale(1.05);
+}
+
+/* 敬请期待 */
+/* .main .city .city-list .city-list-item6:hover .city-list-bg-5 { */
+    /* 变形-缩放 */
+    /* transform: scale(1.05); */
+/* } */
+
+/* .main .city .city-list .city-list-item6:hover{
+    cursor: default;
+} */
+
+/* end */
+
+.main .city .city-list .city-list-item:hover a img {
+    /* 设置透明度为0 */
+    opacity: 1;
+}
+
+/* end */
+
+/* end */
+
+/* 等待盒子 */
+/* start */
+.main .wait {
+    background: url('/img/wait.jpg');
+    width: 100%;
+    height: 260px;
+    text-align: center;
+    line-height: 260px;
+    font-size: 36px;
+    color: rgba(255, 255, 255, 0.3);
+    position: relative;
+}
+
+.main .wait .mask {
+    width: 100%;
+    height: 260px;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* end */
+
+/* 底部导航栏 */
+/* :start */
+.footer {
+    background: #111111;
+    padding-bottom: 30px;
+}
+
+.footer .footer-socialbar {
+    height: 52px;
+    color: #000;
+    background: #111;
+    text-align: center;
+    font-size: 0;
+    border-bottom: 2px solid #1a1a1a;
+}
+
+.footer .footer-socialbar a {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin-top: 10px;
+    margin-right: 34px;
+    font-size: 14px;
+    position: relative;
+}
+
+/* :last-child:是css结构中的伪类选择器,用于选中最后一个元素 */
+.footer .footer-socialbar a:last-child {
+    margin-right: 0;
+}
+
+.footer .footer-socialbar a img {
+    width: 32px;
+    height: 32px;
+    /* 设置透明度 */
+    opacity: 0.4;
+}
+
+.footer .footer-socialbar a:hover img {
+    opacity: 1;
+}
+
+.footer .footer-socialbar a .fenxiang {
+    width: 304%;
+    height: 120px;
+    background: #3d3d3d;
+    border-radius: 6px;
+    /* 绝对定位 */
+    position: absolute;
+    right: -7px;
+    top: 55px;
+    /* 隐藏元素 */
+    display: none;
+}
+
+.footer .footer-socialbar a:hover .fenxiang {
+    /* 隐藏元素 */
+    display: block;
+}
+
+.footer .footer-socialbar a .fenxiang::before {
+    content: "";
+    width: 100%;
+    height: 22px;
+    background: transparent;
+    position: absolute;
+    left: 0;
+    top: -22px;
+}
+
+/* 实现三角形 */
+.footer .footer-socialbar a .fenxiang::after {
+    content: "";
+    /* 子元素绝对定位 */
+    position: absolute;
+    right: 13px;
+    top: -27px;
+    width: 0px;
+    height: 0px;
+    border-top: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 14px solid #3d3d3d;
+    border-left: 14px solid transparent;
+}
+
+.footer .footer-socialbar a .fenxiang p {
+    color: #cccccc;
+    font-size: 18px;
+    height: 46px;
+    line-height: 46px;
+}
+
+.footer .footer-socialbar a .fenxiang .icon {
+    width: 44px;
+    height: 44px;
+    background: pink;
+    margin-right: 20px;
+    /* 转成行内块元素 一行可以显示多个并且可以设置宽度高度 */
+    display: inline-block;
+    /* 设置背景图片 */
+    background: url('/img/icons.png') no-repeat;
+    /* 设置透明度 */
+    opacity: 0.9;
+}
+
+.footer .footer-socialbar a .fenxiang .icon:hover {
+    /* 设置透明度 */
+    opacity: 1;
+}
+
+.footer .footer-socialbar a .fenxiang .icon-qqzone {
+    /* 设置背景图片定位 */
+    background-position: -74px -74px;
+}
+
+.footer .footer-socialbar a .fenxiang .icon-qq {
+    /* 设置背景图片定位 */
+    background-position: -74px -10px;
+}
+
+.footer .footer-socialbar a .fenxiang .icon-weibo {
+    background-position: -138px -138px;
+}
+
+.footer .footer-socialbar a .fenxiang .icon-tieba {
+    background-position: -10px -138px;
+}
+
+.footer .footer-content {
+    padding: 30px 0;
+    background: #000;
+    color: #999;
+    font-size: 14px;
+    height: 343px;
+}
+
+.footer .footer-content .footer-warp {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.footer .footer-content .footer-warp .footer-content-left {
+    margin-top: 76px;
+}
+
+.footer .footer-content .footer-warp .footer-content-left .copyimg {
+    width: 120px;
+    margin-top: 19px;
+}
+
+.footer .footer-content .footer-warp .footer-content-left .line {
+    width: 1px;
+    height: 28px;
+    background: #666;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 26px;
+}
+
+/* 这个是图片区域 */
+.footer .footer-content .footer-warp .footer-content-left .gamelogo {
+    width: 110px;
+}
+
+/* 右边上部分的超链接 没问题 */
+.footer .footer-content .footer-warp .footer-content-right .links {
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* 这个是有右边的信息  没问题 */
+.footer .footer-content .footer-warp .footer-content-right .info {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+/* 这个是变白的超链接 没问题 */
+.footer .footer-content .footer-warp .footer-content-right .info a:hover {
+    color: white;
+}
+
+.footer .footer-content .footer-warp .footer-content-right .icon a {
+    margin-right: 8px;
+}
+
+/* :end */

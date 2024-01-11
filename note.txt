@@ -1,0 +1,541 @@
+<h1>vscode 快捷键</h1>
+
+<h2>生成多个相同的标签</h2>
+> 标签名*n
+
+> 生成父子关系
+> div>p
+
+> 生成兄弟关系
+> div+p
+
+> 生成标签内的内容
+> div{内容}
+
+
+
+> ctrl+x 选中整行代码
+> 上移一行 alt+up
+> 下移一行 alt+down
+> ctrl+k 删除行
+> ctrl+shift+k 删除当前行
+> ctrl+shift+l 删除当前行及下一行
+> ctrl+shift+h 删除当前行及上一行
+> ctrl+shift+j 删除当前行及下
+> ctrl+鼠标滚轮 缩放
+
+2024.1.9
+
+> 今天讲的知识点有定位和css3的,还有视频标签知识点
+> 1.视频标签
+> HTML5的视频标签是video，它是HTML5的新标签，用来定义视频内容。
+> video标签有多个属性，如下：
+> autoplay：自动播放,加载完毕后自动播放,有些浏览器默认不支持
+> controls：控制栏,用于显示控制面板
+> loop：循环播放
+> muted：静音播放
+> src：视频地址,文件所在地
+> width：视频宽度 height：视频高度
+> 可以加入去掉边距
+> object-fit：cover  将对象撑满
+> 2.定位
+> 有五种定位方式
+> 1.是静态定位 2. 相对定位 3.绝对定位 4.固定属性 5.粘性属性
+> 先学习固定定位
+> 固定定位就是让元素在页面中固定不动，不随页面滚动而滚动。
+> position: fixed;
+> 对设置宽度的width的百分比
+> 设置宽度跟行高的一样的时候,可以设置垂直居中
+> 水平居中,可以使用,text-align: center;
+> 设置固定定位会使得,占掉文档流的位置,不占据空间
+> 需要设置偏移量 left:0; top:0;
+> 并且给你的文字加上padding:对应的导航栏高
+> 这是老师的源码介绍,理解一下<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS定位模式有5种,分别是 */
+        /* 静态定位 */
+        /* 相对定位 */
+        /* 绝对定位 */
+        /* 固定定位 */
+        /* 粘性定位 */
+ 
+ 
+        /* 我们现在先学习固定定位, 固定能够实现让被固定定位的元素,固定在页面中某个位置, 不随页面的滚动而固定 一般顶部导航栏或者侧边栏会使用到 */
+ 
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            padding-top: 40px;
+        }
+        .header{
+            background: pink;
+            /* 设置固定定位,固定定位以后的元素,会脱离标准文档流,不占位置 */
+            position:fixed;
+            /* 设置偏移量 */
+            left: 0;
+            top: 0;
+            /* 设置宽度 */
+            width: 100%;
+            /* 设置高度 */
+            height: 40px;
+            /* 设置行高的取值跟高度的取值一样的时候,就可以实现单行文字垂直居中 */
+            line-height: 40px;
+            /* 水平方向内容居中 */
+            text-align: center;
+        }
+        .main{
+            background:orange;
+        }
+        .main p{
+            height: 50px;
+            line-height: 50px;
+            background: lightgreen;
+            margin-bottom: 10px;
+        }
+        .sliderbar{
+            background: skyblue;
+            /* 固定定位 */
+            position: fixed;
+            /* 偏移量 */
+            right: 0;
+            top:50%;
+ 
+            width: 200px;
+            height: 300px;
+            /* 为了让元素可以在垂直方向上居中,我们设置了top:50%以后,还需要设置margin-top的值为负高度的一半 */
+            margin-top: -150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">我是顶部导航栏</div>
+    <div class="main">
+        <!-- p{我是main层里面p段落$}*100 -->
+        <p>我是main层里面p段落1</p>
+        <p>我是main层里面p段落2</p>
+        <p>我是main层里面p段落3</p>
+        <p>我是main层里面p段落4</p>
+        <p>我是main层里面p段落5</p>
+        <p>我是main层里面p段落6</p>
+        <p>我是main层里面p段落7</p>
+        <p>我是main层里面p段落8</p>
+        <p>我是main层里面p段落9</p>
+        <p>我是main层里面p段落10</p>
+        <p>我是main层里面p段落11</p>
+        <p>我是main层里面p段落12</p>
+        <p>我是main层里面p段落13</p>
+        <p>我是main层里面p段落14</p>
+        <p>我是main层里面p段落15</p>
+        <p>我是main层里面p段落16</p>
+        <p>我是main层里面p段落17</p>
+        <p>我是main层里面p段落18</p>
+        <p>我是main层里面p段落19</p>
+        <p>我是main层里面p段落20</p>
+        <p>我是main层里面p段落21</p>
+        <p>我是main层里面p段落22</p>
+        <p>我是main层里面p段落23</p>
+        <p>我是main层里面p段落24</p>
+        <p>我是main层里面p段落25</p>
+        <p>我是main层里面p段落26</p>
+        <p>我是main层里面p段落27</p>
+        <p>我是main层里面p段落28</p>
+        <p>我是main层里面p段落29</p>
+        <p>我是main层里面p段落30</p>
+        <p>我是main层里面p段落31</p>
+        <p>我是main层里面p段落32</p>
+        <p>我是main层里面p段落33</p>
+        <p>我是main层里面p段落34</p>
+        <p>我是main层里面p段落35</p>
+        <p>我是main层里面p段落36</p>
+        <p>我是main层里面p段落37</p>
+        <p>我是main层里面p段落38</p>
+        <p>我是main层里面p段落39</p>
+        <p>我是main层里面p段落40</p>
+        <p>我是main层里面p段落41</p>
+        <p>我是main层里面p段落42</p>
+        <p>我是main层里面p段落43</p>
+        <p>我是main层里面p段落44</p>
+        <p>我是main层里面p段落45</p>
+        <p>我是main层里面p段落46</p>
+        <p>我是main层里面p段落47</p>
+        <p>我是main层里面p段落48</p>
+        <p>我是main层里面p段落49</p>
+        <p>我是main层里面p段落50</p>
+        <p>我是main层里面p段落51</p>
+        <p>我是main层里面p段落52</p>
+        <p>我是main层里面p段落53</p>
+        <p>我是main层里面p段落54</p>
+        <p>我是main层里面p段落55</p>
+        <p>我是main层里面p段落56</p>
+        <p>我是main层里面p段落57</p>
+        <p>我是main层里面p段落58</p>
+        <p>我是main层里面p段落59</p>
+        <p>我是main层里面p段落60</p>
+        <p>我是main层里面p段落61</p>
+        <p>我是main层里面p段落62</p>
+        <p>我是main层里面p段落63</p>
+        <p>我是main层里面p段落64</p>
+        <p>我是main层里面p段落65</p>
+        <p>我是main层里面p段落66</p>
+        <p>我是main层里面p段落67</p>
+        <p>我是main层里面p段落68</p>
+        <p>我是main层里面p段落69</p>
+        <p>我是main层里面p段落70</p>
+        <p>我是main层里面p段落71</p>
+        <p>我是main层里面p段落72</p>
+        <p>我是main层里面p段落73</p>
+        <p>我是main层里面p段落74</p>
+        <p>我是main层里面p段落75</p>
+        <p>我是main层里面p段落76</p>
+        <p>我是main层里面p段落77</p>
+        <p>我是main层里面p段落78</p>
+        <p>我是main层里面p段落79</p>
+        <p>我是main层里面p段落80</p>
+        <p>我是main层里面p段落81</p>
+        <p>我是main层里面p段落82</p>
+        <p>我是main层里面p段落83</p>
+        <p>我是main层里面p段落84</p>
+        <p>我是main层里面p段落85</p>
+        <p>我是main层里面p段落86</p>
+        <p>我是main层里面p段落87</p>
+        <p>我是main层里面p段落88</p>
+        <p>我是main层里面p段落89</p>
+        <p>我是main层里面p段落90</p>
+        <p>我是main层里面p段落91</p>
+        <p>我是main层里面p段落92</p>
+        <p>我是main层里面p段落93</p>
+        <p>我是main层里面p段落94</p>
+        <p>我是main层里面p段落95</p>
+        <p>我是main层里面p段落96</p>
+        <p>我是main层里面p段落97</p>
+        <p>我是main层里面p段落98</p>
+        <p>我是main层里面p段落99</p>
+        <p>我是main层里面p段落100</p>
+    </div>
+    <div class="sliderbar">我是侧边栏,嘻嘻嘻</div>
+</body>
+</html>
+> top:50% 是在那条线的50%,不是盒子的50% 可以使用(负高度)margin-top:-150%;,使得能够垂直居中,px同理
+
+这个比较重要,毕竟自己一直还没掌握完全
+> css定位 子绝父相 就是子元素绝对定位,父元素用相对定位,定位的意思就是子元素在父元素内进行定位,定位的意思就是定在某个位置上
+子元素要绝对定位,不能跑出父元素出去
+position: absolute;
+然后要调整位置可以设置偏移量
+比如top botton left right, 偏移量设置的时候,优先级是top和left,数字的取值可以使用css单位
+
+父元素相对定位
+position: relative;
+然后子元素就跑不出父元素,
+
+如果top50% left50%
+其实是在顶点处50% 要让其在中间,要用成margin-top:-50% margin-left:-75%
+就是子元素的宽高的一半
+	
+这个是设置堆叠顺序,z-index:谁越大谁在上面
+
+
+absolute是绝对定位
+relative是相对定位
+
+元素的显示和隐藏
+display:none   隐藏元素
+display:block  显示元素
+
+display:flex  是弹性布局,是为了最大限度填充空间
+
+css过度属性
+transition : 需要过渡的css属性名称 加上过渡所需事件
+过渡所需时间表示s,1000ms=1s
+加上all 代表着全部属性过渡
+
+css3过渡动画
+@keyframes name{
+from{
+从什么属性
+	}
+to{
+到什么属性
+	}
+}	
+使用动画
+animation : name:动画名称 duration: timing-function delay-interaion-count direction fill-mode;
+linear 表示动画变化时动画变化时匀速的
+infinite 表示无限次动画的意思
+alternate 表示需要反向动画  有两个参数
+(交替动画)
+
+
+css伪元素选择器的使用
+第一个是before  会在标签内容前面添加一个行内元素,通过content属性设置行内元素
+第二个是after   这个是在标签内容后面添加内容
+   需要注意的是前面添加两个::
+注意: 双标签才有标签元素,所以只有双标签才可以使用者两个伪元素
+
+css变形
+transform
+transform的取值有好多个
+比如tranlate是平移 rotate旋转 skew倾斜 scale 缩放
+transform移动距离的取值可以是数值带css单位或者是百分比,允许负值
+这个比较好,毕竟通过定位,容易在修改子元素的宽度和高度的时候,同时发生变化,但是通过平移的时候,就不用考虑还要去修改偏移量
+
+旋转rotato 通过在transform: rotato(数值带deg单位,可以理解为度数,1true代表360deg)   还有正值代表顺时针,负值代表逆时针
+
+
+变形属性最好带上过渡 tansition 不然看不出效果
+
+如果是变形中的缩放 scale->scaleX/Y  (数值不带单位,允许负值)
+缩放中有对应的xy轴,需要注意   scale(数值,数值)
+注意:1是原来的大小
+图片溢出隐藏overform:hidden
+
+css实现单行文本出现省略号
+三句代码
+1. white-spacn: nowrap
+2. overflow: hidden
+3. text-overflow: ellipsis
+
+
+display:不能用transition进行过渡,因为对display隐藏元素的时候,会对元素位置清除掉,导致无法正确显示
+所以进行遮罩效果的时候,应该使用成opacity:0实现透明度实现元素的隐藏,还占据位置
+
+
+小结:css3过渡属性并不是支持所有的css属性的变化,比如display就不支持过渡
+
+
+span不能设置宽高
+但是可以通过display:inline-block转成行内块,一行能够显示多个块级元素,并且可以设置宽高
+
+HTML 之前自己写的
+
+
+
+css
+/* 展示页 */
+/* start */
+.main {
+    visibility: visible;
+}
+
+.main.warp {
+    background-color: rgba(17, 17, 17, 0.8);
+}
+
+/* 背景视频 */
+/* start */
+@media screen and (max-width: 1280px) {
+    .main .warp .poster {
+        width: 1280px;
+    }
+}
+
+.main .warp .poster {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main .warp .poster #bgwrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fcf9fe;
+}
+
+.main .warp .poster #bgwarp .video {
+    position: fixed;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
+    object-fit: cover;
+}
+
+/* .main .warp .video {
+    position: fixed;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
+} */
+
+.main .warp .poster .sign .poster_video_entry{
+    width: 356px;
+    height: 76px;
+    background: url("/img/play-bg.png") no-repeat center center;
+    margin-bottom: 20px;
+}
+
+.main .warp .poster .sign .poster_video_entry .poster_video{
+    position: relative;
+    display: block;
+    margin: 14px auto 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 0;
+    background: #fff;
+    font-size: 0;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s linear;
+}
+
+.main .warp .poster .sign .poster_video_entry .poster_video::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 28px;
+    height: 28px;
+    transform: (-50%,-50%);
+    background: url("/img/play-inner.png") no-repeat;
+    background-position: center top;
+}
+
+/* end */
+
+/* 版权声明 */
+/* start */
+p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.main .warp .poster .sign .footer-texts {
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    bottom: 20px;
+    position: absolute;
+    left: 20px;
+}
+
+/* end */
+
+/* 下载盒子 */
+/* start */
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.main .warp .poster .sign {
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+.main .warp .poster .sign .mian-ys-download-pc {
+    flex-shrink: 0;
+    margin: 20px;
+    height: 125px;
+}
+
+.main .warp .poster .sign .mian-ys-download-pc .main-ys-download-pc_box-download {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 622px;
+    height: 100%;
+    align-items: center;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc_qrcode {
+    position: relative;
+    width: 94px;
+    height: 94px;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc_qrcode .main-ys-download-pc_qrcode_icon {
+    position: absolute;
+    left: 50%;
+    top: 33px;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #475e7d;
+    border-radius: 4px
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc_qrcode .main-ys-download-pc_qrcode_code {
+    width: 100%;
+    display: block;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc-cloudys {
+    display: block;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc-cloudys:first-child {
+    display: block;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc-cloudys:last-child {
+    display: none;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc-cloudys img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 95px
+}
+
+.main .warp .poster .sign .mian-ys-download-pc .main-ys-download-pc_group .main-ys-download-pc-group-btn-sm {
+    width: 155px;
+    height: 44px;
+}
+
+.main .warp .poster .sign .mian-ys-download-pc .main-ys-download-pc_group .main-ys-download-pc-group-btn-sm img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .warp .poster .sign .mian-ys-download-pc .main-ys-download-pc_group .main-ys-download-pc-group-btn-sm:first-child {
+    display: block;
+}
+
+.main .warp .poster .sign .mian-ys-download-pc .main-ys-download-pc_group .main-ys-download-pc-group-btn-sm:last-child {
+    display: none;
+}
+
+.main .warp .poster .sign .mian-ys-download-pc .main-ys-download-pc_box-download .main-ys-download-pc-group-btn-lg {
+    width: 95px;
+    height: 95px;
+}
+
+/* end */

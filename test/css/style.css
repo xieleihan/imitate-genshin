@@ -1,0 +1,403 @@
+/* 初始化样式，通用样式 */
+/* start */
+/* 去掉页面所有标签的内填充外边距 */
+* {
+    /* 定义元素边框与元素内容之间的空间，即上下左右的内边距 */
+    padding: 0;
+    margin: 0;
+    /* css3新增样式 */
+    box-sizing: border-box;
+}
+
+/* 去掉列表符号 */
+li {
+    list-style: none;
+}
+
+/* 去掉img底部的缝隙 */
+img {
+    vertical-align: bottom;
+}
+
+/* 类是可以被定义的，比如，我们可以定义一个浮动类，这样，我们就可以在任意位置使用这个类了。 */
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* ::after (:after) CSS伪元素 ::after 用来创建一个伪元素，作为已选中元素的最后一个子元素。 
+通常会配合 content 属性来为该元素添加装饰内容。 这个虚拟元素默认是行内元素 */
+.clear::after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+/* 设置整个页面整个字体相关样式 */
+body {
+    font-size: 14px;
+    font-family: "Microsoft YaHei", "Arial", "Helvetica", "sans-serif";
+    /* 设置行高为1.5倍 */
+    line-height: 1.5;
+    /* 设置页面最小宽度 */
+    min-width: 1280px;
+}
+
+/* 超链接的美化 */
+a {
+    /* 去掉超链接下划线 */
+    text-decoration: none;
+    /* 设置a标签的字体颜色继承父类元素 */
+    /* inherit就是继承父类 */
+    color: inherit;
+}
+
+/* end */
+
+/* 业务逻辑样式 */
+/* 顶部导航栏 */
+/* start */
+.header {
+    height: 66px;
+    background: rgba(17, 17, 17, 0.8);
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.header .header-left {
+    position: relative;
+    height: 66px;
+}
+
+.header-left .music-icon {
+    width: 30px;
+    height: 30px;
+    background: url(/img/music.png);
+    /* background-size: 第一个是设置背景图片宽度 第二个是背景图片高度 */
+    background-size: 100% 100%;
+    cursor: pointer;
+    margin-top: 18px;
+    position: absolute;
+    left: 45px;
+    top: 0;
+    z-index: 10;
+}
+
+.header-left .logo {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header-left .logo img {
+    width: 317px;
+    height: 100%;
+}
+
+.header-left .nav {
+    margin-left: 280px;
+    position: relative;
+    height: 66px;
+}
+
+.header-left .nav ul {
+    height: 100%;
+    /* 设置行高的值跟高度一样的时候,就可以实现单行文本垂直居中 */
+    line-height: 66px;
+}
+
+.header-left .nav ul li {
+    float: left;
+    margin-right: 43px;
+}
+
+.header-left .nav ul li a {
+    /* 这个display是用来把a标签转成块元素 */
+    display: block;
+    color: #cccccc;
+    font-size: 17px;
+    /* 设置每个字符之间的间隙 */
+    letter-spacing: 6px;
+}
+
+.header-left .nav ul li a.active {
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    color: white;
+}
+
+/* 鼠标移入后效果 */
+.header-left .nav ul li a:hover {
+    /* css3文本阴影 */
+    /* text-shadow 第一个参数是x轴的偏移量 第二个参数是y轴的偏移量 第三个参数是模糊度 第四个参数是颜色 */
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    color: white;
+}
+
+.header-left .nav .line {
+    width: 40px;
+    height: 5px;
+    background: #69e0ff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.header .header-right {
+    height: 27px;
+    margin-top: 19.5px;
+    color: #cccccc;
+    font-size: 17px;
+}
+
+.header .header-right .item {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.header .header-right .item img {
+    width: 27px;
+    height: 27px;
+    /* 设置vertical-align: middle，
+    会让该元素盒子的垂直中点与父元素(行盒子)的baseline值+x-height的一半（字母x高度的一半）位置对齐。 */
+    vertical-align: middle;
+    margin-left: 12px;
+    /* opacity设置元素以及其内容的透明度, 取值0~1之间的数字,允许小数, 
+    包括0和1 0代表完全透明度 1代表完全不透明度 */
+    opacity: 0.6;
+}
+
+.header .header-right .item:hover {
+    color: white;
+}
+
+.header .header-right .item:hover img {
+    opacity: 1;
+}
+
+/* end */
+
+/* 展示页 */
+/* start */
+.main {
+    visibility: visible;
+}
+
+.main .warp {
+    background-color: rgba(17, 17, 17, 0.8);
+}
+
+/* 背景视频 */
+/* start */
+@media screen and (max-width: 1280px) {
+    .main .warp .poster {
+        width: 1280px;
+    }
+}
+
+.main .warp .poster {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main .warp .poster #bgwrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fcf9fe;
+}
+
+.main .warp .poster #bgwarp .video {
+    position: fixed;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
+    object-fit: cover;
+}
+
+/* .main .warp .video {
+    position: fixed;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -10;
+} */
+
+.main .warp .poster .sign .poster_video_entry {
+    width: 356px;
+    height: 76px;
+    background: url("/img/play-bg.png") no-repeat center center;
+    margin-bottom: 20px;
+}
+
+.main .warp .poster .sign .poster_video_entry .poster_video {
+    position: relative;
+    display: block;
+    margin: 14px auto 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 0;
+    background: #fff;
+    font-size: 0;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.2s linear;
+}
+
+.main .warp .poster .sign .poster_video_entry .poster_video::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 28px;
+    height: 28px;
+    transform: (-50%, -50%);
+    background: url("/img/play-inner.png") no-repeat;
+    background-position: center top;
+}
+
+/* end */
+
+/* 版权声明 */
+/* start */
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.main .warp .poster .sign .footer-texts {
+    color: white;
+    font-size: 16px;
+    line-height: 24px;
+    bottom: 20px;
+    position: absolute;
+    left: 20px;
+}
+
+/* end */
+
+/* 下载盒子 */
+/* start */
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+.main .warp .poster .sign {
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+}
+
+.main .warp .poster .sign .mian-ys-download-pc {
+    flex-shrink: 0;
+    margin: 20px;
+    height: 125px;
+}
+
+.main .warp .poster .sign .mian-ys-download-pc .main-ys-download-pc_box-download {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 622px;
+    height: 100%;
+    align-items: center;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc_qrcode {
+    position: relative;
+    width: 94px;
+    height: 94px;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc_qrcode .main-ys-download-pc_qrcode_icon {
+    position: absolute;
+    left: 50%;
+    top: 33px;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #475e7d;
+    border-radius: 4px
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc_qrcode .main-ys-download-pc_qrcode_code {
+    width: 100%;
+    display: block;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc-cloudys {
+    display: block;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc-cloudys:first-child {
+    display: block;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc-cloudys:last-child {
+    display: none;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_box-download .main-ys-download-pc-cloudys img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .warp .poster .sign .main-ys-download-pc_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 95px
+}
+
+.main .warp .poster .sign .mian-ys-download-pc .main-ys-download-pc_group .main-ys-download-pc-group-btn-sm {
+    width: 155px;
+    height: 44px;
+}
+
+.main .warp .poster .sign .mian-ys-download-pc .main-ys-download-pc_group .main-ys-download-pc-group-btn-sm img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .warp .poster .sign .mian-ys-download-pc .main-ys-download-pc_group .main-ys-download-pc-group-btn-sm:first-child {
+    display: block;
+}
+
+.main .warp .poster .sign .mian-ys-download-pc .main-ys-download-pc_group .main-ys-download-pc-group-btn-sm:last-child {
+    display: none;
+}
+
+.main .warp .poster .sign .mian-ys-download-pc .main-ys-download-pc_box-download .main-ys-download-pc-group-btn-lg {
+    width: 95px;
+    height: 95px;
+}
+
+/* end */

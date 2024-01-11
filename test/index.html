@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高仿原神</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <!-- <div>HTML的css布局一般都需要先根据效果,写出相应的html结构代码再写css</div> -->
+    <!-- 顶部导航栏 -->
+    <div class="header clear">
+        <!-- 左部分 -->
+        <div class="header-left fl">
+            <!-- 音乐图标 -->
+            <div class="music-icon">
+            </div>
+            <!-- 原神logo -->
+            <div class="logo">
+                <img src="/img/logo.png" alt="">
+            </div>
+            <!-- 导航栏 -->
+            <div class="nav">
+                <ul class="clear">
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">新闻</a></li>
+                    <li><a href="#">角色</a></li>
+                    <li><a href="#">世界</a></li>
+                    <li><a href="#">漫画</a></li>
+                    <li><a href="#">社区</a></li>
+                    <li><a href="#">赛事</a></li>
+                </ul>
+                <!-- 蓝线 -->
+                <div class="line"></div>
+            </div>
+        </div>
+        <!-- 右部分 -->
+        <div class="header-right fr clear">
+            <div class="item fl">
+                成长关爱系统
+                <img src="/img/heart.png" alt="">
+            </div>
+            <div class="item fl">
+                登&nbsp;录
+                <img src="/img/user.png" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="warp" style="background-position-y:0px;">
+            <!-- 这是poster显示 -->
+            <div class="poster">
+                <!-- 这是网站背景视频 -->
+                <!-- start -->
+                <div id="bgwrap">
+                    <div class="bg"></div>
+                    <video class="video" src="https://ys.mihoyo.com/main/_nuxt/videos/bg.3e78e80.mp4" autoplay="true"
+                        loop="true" muted="true" style="opacity: 1; width: 1280px; height: 720px;"></video>
+                </div>
+                <!-- end -->
+                <div class="sign" style="display: flex;">
+                    <!-- 这是播放按钮的显示 -->
+                    <!-- start -->
+                    <div class="poster_video_entry">
+                        <button class="poster_video">
+                            ::before
+                            "播放"
+                        </button>
+                    </div>
+                    <!-- end -->
+                    <!-- 这是下面盒子下载的图片显示 -->
+                    <!-- start -->
+                    <div class="mian-ys-download-pc">
+                        <div class="main-ys-download-pc_box-download">
+                            <!-- 下面这个是QR Code -->
+                            <!-- start -->
+                            <div class="main-ys-download-pc_qrcode">
+                                <img src="/img/d-qrcode.jpeg" alt="" class="main-ys-download-pc_qrcode_icon">
+                                <img src="/img/d-qrcode.png" alt="" class="main-ys-download-pc_qrcode_code">
+                            </div>
+                            <!-- end -->
+                            <!-- 下面这个是云原神,网页版盒子的div -->
+                            <!-- start -->
+                            <a class="main-ys-download-pc-cloudys">
+                                <img src="/img/d-web-cloud.png" alt="网页版云原神">
+                                <img src="/img/d-web-cloud-model.png" alt="网页版云原神模型">
+                            </a>
+                            <!-- end -->
+                            <!-- 下面是云原神旁边的那两个盒子 -->
+                            <!-- start -->
+                            <div class="main-ys-download-pc_group">
+                                <a class="main-ys-download-pc_group-btn-sm">
+                                    <img src="/img/d-ps.png" alt="原神PS4版">
+                                    <img src="/img/d-ps-modal.png" alt="原神PS4版模型">
+                                </a>
+                                <a class="main-ys-download-pc-group-btn-sm">
+                                    <img src="/img/d-ios.png" alt="原神ios版">
+                                    <img src="/img/d-ios-modal.png" alt="原神ios版模型">
+                                </a>
+                            </div>
+                            <!-- end -->
+                            <!-- 那两个盒子隔壁的两个盒子 -->
+                            <!-- start -->
+                            <div class="main-ys-download-pc_group">
+                                <a class="main-ys-download-pc-group-btn-sm">
+                                    <img src="/img/d-tap.png" alt="原神taptap版">
+                                    <img src="/img/d-tap-modal.png" alt="原神taptap版模型">
+                                </a>
+                                <a class="main-ys-download-pc-group-btn-sm">
+                                    <img src="/img/d-android.png" alt="原神安卓版">
+                                    <img src="/img/d-android-modal.png" alt="原神安卓版模型">
+                                </a>
+                            </div>
+                            <!-- end -->
+                            <!-- 那两个盒子隔壁的两个盒子的隔壁的大盒子 -->
+                            <!-- start -->
+                            <a class="main-ys-download-pc-group-btn-lg">
+                                <img src="/img/d-pc.png" alt="原神pc版">
+                                <img src="/img/d-pc-modal.png" alt="原神pc版模型">
+                            </a>
+                            <!-- end -->
+                        </div>
+                    </div>
+                    <!-- end -->
+                    <!-- 这是网站右下角的文字说明 -->
+                    <!-- start -->
+                    <div class="footer-texts">
+                        <p class="footer-text1">应用名称:原神</p>
+                        <p class="footer-text2">开发者名称:上海米哈游天命科技有限公司</p>
+                        <p class="footer-text3">
+                            <span>当前版本:1.0.0</span>
+                            <span>更新时间:2023.12.20</span>
+                        </p>
+                        <p>
+                            <a href="#">隐私协议</a>
+                            <a href="#">产品功能及用户权限</a>
+                        </p>
+                    </div>
+                    <!-- end -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="/js/main.js"></script>
+<script src="/js/jquery-3.7.1.min.js"></script>
+
+</html>
