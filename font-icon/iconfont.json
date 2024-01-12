@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1037687",
+      "name": "微博",
+      "font_class": "weibo",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "6805659",
+      "name": "Tap",
+      "font_class": "Tap",
+      "unicode": "e9ce",
+      "unicode_decimal": 59854
+    },
+    {
+      "icon_id": "12495808",
+      "name": "cat_help",
+      "font_class": "cat_help",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    }
+  ]
+}
